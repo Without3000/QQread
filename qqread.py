@@ -128,12 +128,12 @@ def qqreadtodaygift(headers, sec):
 def qqreadaddtime(headers, addtimeurl):
     """上传阅读时长"""
     sectime = random.randint(TIME*60*1000, (TIME+1)*60*1000)
-    findtime = re.compile(r'readTime=(.*?)&')
-    #findtime1 = re.compile(r'readTime%22%3A(.*?)%2C')
+    findtime = re.compile(r'readTime=(.*?)&read_')
+    findtime1 = re.compile(r'readTime%22%3A(.*?)%2C')
     url = re.sub(findtime.findall(addtimeurl)[
                  0], str(sectime), str(addtimeurl))
-    #url = re.sub(findtime1.findall(addtimeurl)[
-    #             0], str(sectime), str(addtimeurl))
+    url = re.sub(findtime1.findall(addtimeurl)[
+                 0], str(sectime), str(addtimeurl))
     delay()
     addtime_data = requests.get(url, headers=ast.literal_eval(headers)).json()
     return addtime_data
@@ -270,3 +270,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    
