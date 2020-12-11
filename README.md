@@ -1,4 +1,6 @@
-# QQRead使用说明
+<h1 align="center">QQRead使用说明</h1>
+
+<p align="center"><img alt="Water's github stats" src="https://github-readme-stats.vercel.app/api?username=Water008&show_icons=true&hide_border=true" /></p>
 
 > 基于python的自动化脚本  
 > 低调使用，请勿到处宣传  
@@ -32,17 +34,18 @@
 | `QQREADHEADERS`      | 主header      | 必须   | 绝大多数功能的正常使用需要此参数  | 
 | `QQREADBODYS`        | 主body        | 必须   | 绝大多数功能的正常使用需要此参数  |  
 | `QQREADTIMEURL`      | 阅读时长URL    | 必须   | 上传阅读时长功能需要的URL        | 
-| `NOTIFYTYPE`         | 通知类型       | 非必须 | 详见通知类型                    |  
-| `NOTIFYCFG`          | 通知服务       | 非必须 | 详见通知服务                    | 
+| `NOTIFYTYPE`         | 通知类型       | 非必须 | 详见[通知类型](#通知类型)        |  
+| `NOTIFYCFG`          | 通知服务       | 非必须 | 详见[通知服务](#通知服务)        | 
+| `DRAWAMOUNT`         | 自动提现       | 非必须 | 详见[自动提现](#自动提现)        |
 | `SCKEY`              | server酱key   | 非必须 | 自行获取                        | 
 | `BARK`               | bark秘钥      | 非必须 | 自行获取                        | 
 | `TG_BOT_TOKEN`      | telegram推送  | 非必须 | tg推送,填写自己申请[@BotFather](https://t.me/BotFather)的Token,如`10xxx4:AAFcqxxxxgER5uw` , [具体教程](https://github.com/lxk0301/jd_scripts/blob/master/backUp/TG_PUSH.md) |
 | `TG_USER_ID`         | telegram推送  | 非必须 | tg推送,填写[@getuseridbot](https://t.me/getuseridbot)中获取到的纯数字ID, [具体教程](https://github.com/lxk0301/jd_scripts/blob/master/backUp/TG_PUSH.md) |
 
 
-**⚠️cookie获取方法：**
+**⚠️必须参数获取方法：**
 
-1. 进入 https://m.q.qq.com/a/s/d3eacc70120b9a37e46bad408c0c4c2a 
+1. 进入 https://m.q.qq.com/a/s/6fb00f7035f82425df91a5b668f6be8b
 
 2. 进一本书阅读一会儿，然后退出，获取`QQREADHEADERS` `QQREADBODYS` 和 `QQREADTIMEURL` 
 
@@ -137,6 +140,16 @@ GitHub action自动运行，账号信息读取自 `Repo-Setting-Secrets`
   [0，1，2，3]  0：关闭通知   1：所有通知   2：领取宝箱成功通知   3：每领15个宝箱通知一次
 ```
 
+### 自动提现
+
+默认为关闭此功能，需要自动提现请修改 `DRAWAMOUNT` 参数
+
+支持提现类型
+
+```
+  [0, 10, 30, 50, 100] 分别为关闭自动提现、提现10元、30元、50元、100元，默认为关闭
+```
+
 ### 同步Fork后的代码
 
 手动同步，[具体教程](http://www.ibloger.net/article/3361.html)
@@ -149,3 +162,7 @@ GitHub action自动运行，账号信息读取自 `Repo-Setting-Secrets`
 
 * [@lxk0301](https://github.com/lxk0301)
 
+### Technologies used
+<img align="left" alt="Python logo" height="100px" src="https://raw.githubusercontent.com/tony-nguyen1/tony-nguyen1/main/.github/images/PythonLogo.svg"/>
+
+<img align="left" alt="Python logo" height="100px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Water008&layout=compact&hide_border=true"/>
